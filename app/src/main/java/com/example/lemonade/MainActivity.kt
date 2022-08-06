@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
         lemonImage!!.setOnLongClickListener {
             // TODO: replace 'false' with a call to the function that shows the squeeze count
-            false
+            showSnackbar()
         }
     }
 
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                      if(lemonSize==0) {
                          lemonadeState=DRINK
                          lemonSize=-1 }//end if
-                    showSnackbar()
+
                 }//end squeeze
         // TODO: When the image is clicked in the DRINK state the state should become RESTART
                 DRINK->{lemonadeState=RESTART}
